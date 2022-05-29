@@ -12,14 +12,15 @@
     <link href="{% static 'mainapp/css/mainapp.css' %}" rel="stylesheet">
 
 </head>
-<body background="{% static 'mainapp/img/back.jpg' %}">
+<body>
 
 <aside>
-
+    <img src="{% static 'mainapp/img/logo_aside.jpg' %}" alt="">
+    <span class="logo">MOTO VOVK</span>
     <h3>Menu of suite</h3>
     <ul>
-        <a href="" ><li>Home</li></a>
-        <a href="" ><li>About</li></a>
+        <a href="{% url 'home' %}" ><li>Home</li></a>
+        <a href="{% url 'about' %}" ><li>About</li></a>
         <a href="" ><li>Forum</li></a>
     </ul>
 </aside>
