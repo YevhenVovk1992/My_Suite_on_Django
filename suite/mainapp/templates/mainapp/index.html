@@ -1,11 +1,19 @@
 {% extends 'mainapp/layout.html' %}
 
-{% block title %}Главная страца{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <div class="features">
         <h1>Главная страица</h1>
+        {% filter upper %}
         <p>Micro suite about me and my travels</p>
-        <button class="btn btn-warning">To the page "ABOUT" </button>
+        {% endfilter %}
+        <button class="btn btn-warning">To the page "ABOUT"</button>
+    </div>
+    <div class="DateOfTravel">
+        <h2>Where I rode?</h2>
+        <p>{% for el in countries%}
+         {{ el }}
+            {% endfor %}</p>
     </div>
 {% endblock %}

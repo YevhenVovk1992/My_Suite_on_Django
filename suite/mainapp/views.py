@@ -3,7 +3,14 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'mainapp/index.html')
+    data = {
+        'title': ' MOTO VOVK ',
+        'countries': ('Ukrane', 'Hungary', 'Slovenia', 'Austria', 'Bulgaria', 'Romania')
+    }
+    return render(request, 'mainapp/index.html', data)
 
 def about(request):
-    return render(request, 'mainapp/about.html')
+    data = {
+        'title': "About"
+    }
+    return render(request, 'mainapp/about.html', data)
