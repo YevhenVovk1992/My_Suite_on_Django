@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 .idea/
 venv/
+suite/suite/__pycache__/
 main.py
 __pycache__/
 *.py[cod]
