@@ -1,0 +1,14 @@
+{% extends 'mainapp/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>News</h1>
+        {% filter lower %}
+        <p>News from travel</p>
+        {% endfilter %}
+        <button class="btn btn-warning">To the page "ABOUT"</button>
+    </div>
+
+{% endblock %}
