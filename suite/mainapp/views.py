@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
+
 
 # Create your views here.
 def index(request):
@@ -14,3 +15,6 @@ def about(request):
         'title': "About"
     }
     return render(request, 'mainapp/about.html', data)
+
+def pageNotFound(request, exception):
+    return HttpResponseNotFound('<h1> We can not found this page!</h1>')
