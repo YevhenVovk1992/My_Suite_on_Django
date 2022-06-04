@@ -1,9 +1,8 @@
 from django.shortcuts import render
+from .models import Artiles
 
 # Create your views here.
 def news_home(request):
-    data = {
-        'title': "News"
-    }
-    return render(request, 'news/news_home.html', data)
+    news = Artiles.objects.order_by('-date')
+    return render(request, 'news/news_home.html', {'news': news})
 

@@ -11,8 +11,9 @@ main .features{
 main .features h1:{
     font-size: 50px;
 }
-main .features p {
-
+main .features p{
+    max-width: 400px;
+    margin: 20px auto;
 }
 aside{
     float: left;
@@ -50,5 +51,11 @@ main .DateOfTravel{
     color: white;
     float: left;
     margin-left: 20px;
-
+}
+.alert-warning{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
 }

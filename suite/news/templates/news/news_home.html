@@ -1,14 +1,21 @@
 {% extends 'mainapp/layout.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}News{% endblock %}
 
 {% block content %}
     <div class="features">
         <h1>News</h1>
-        {% filter lower %}
-        <p>News from travel</p>
-        {% endfilter %}
-        <button class="btn btn-warning">To the page "ABOUT"</button>
+        {% if news %}{# Проверка наличии новостей #}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p> {{ el.anons }}</p>
+                    <p>{{ el.full_text }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No news</p>
+        {% endif %}
     </div>
 
 {% endblock %}
