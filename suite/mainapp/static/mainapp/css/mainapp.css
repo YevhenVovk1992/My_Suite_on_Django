@@ -22,17 +22,17 @@ aside{
     padding: 2.5%;
     color: black;
     border-right: 5px;
-    height: 100vh;
+    height: 115vh;
     border-right: 5px solid #4d4d4d;
 
 }
 aside img{
-    width: 160px;
+    width: 180px;
     float: left;
 }
 aside .logo{
     font-size: 30px;
-    margin-left: 10px;
+    margin-left: -8px;
     font-weight: bold;
 }
 aside h3{
@@ -50,7 +50,7 @@ aside ul li:hover, aside ul a:hover {
 main .DateOfTravel{
     color: white;
     float: left;
-    margin-left: 20px;
+    margin-left: 120px;
 }
 .alert-warning{
     float: left;
@@ -58,4 +58,9 @@ main .DateOfTravel{
     width: 400px;
     margin: 20px 34%;
     text-align: left;
+}
+#catalog{
+    width: 700px;
+    padding-left: 282px;
+    margin: 20px 17%;
 }

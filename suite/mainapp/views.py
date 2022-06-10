@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 def index(request):
     data = {
         'title': ' MOTO VOVK ',
-        'countries': ('Ukrane', 'Hungary', 'Slovenia', 'Austria', 'Bulgaria', 'Romania')
+        'countries': ('Ukraine', 'Hungary', 'Slovenia', 'Austria', 'Bulgaria', 'Romania')
     }
     return render(request, 'mainapp/index.html', data)
 
