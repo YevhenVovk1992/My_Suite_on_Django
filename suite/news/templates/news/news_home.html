@@ -8,7 +8,9 @@
         {% if news %}{# Проверка наличии новостей #}
             {% for el in news %}
                 <div class="alert alert-warning">
+                    {% filter upper %}
                     <h3>{{ el.title }}</h3>
+                    {% endfilter %}
                     <p> {{ el.anons }}</p>
                     <p>{{ el.full_text }}</p>
                 </div>
@@ -17,5 +19,7 @@
             <p>No news</p>
         {% endif %}
     </div>
-
+{% endblock %}
+{% block add_new %}
+    <a href="{% url 'add_new' %}" ><li><button class="btn btn-info"><i class="fas fa-plus-circle"><i/>Add new</button> </li></a>
 {% endblock %}

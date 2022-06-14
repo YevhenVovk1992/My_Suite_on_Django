@@ -64,3 +64,8 @@ main .DateOfTravel{
     padding-left: 282px;
     margin: 20px 17%;
 }
+form {
+    margin-left: 25%;
+    width: 500px;
+    margin-top: 65px;
+}

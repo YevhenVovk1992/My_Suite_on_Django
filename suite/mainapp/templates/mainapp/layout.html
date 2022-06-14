@@ -13,7 +13,10 @@
 
 </head>
 <body>
-
+<section class="banner">
+    {% block banner %}
+    {% endblock %}
+</section>
 <aside>
     <img src="{% static 'mainapp/img/logo_aside.jpg' %}" alt="">
     <span class="logo">MOTO VOVK</span>
@@ -23,6 +26,8 @@
         <a href="{% url 'about' %}" ><li>About</li></a>
         <a href="{% url 'news_home' %}" ><li>News</li></a>
         <a href="{% url 'catalog_motors' %}" ><li>Catalog</li></a>
+        {% block add_new %}
+        {% endblock %}
     </ul>
 
 </aside>
@@ -30,6 +35,8 @@
     {% block content %}
     {% endblock %}
 </main>
+<footer>
 
+</footer>
 </body>
 </html>
