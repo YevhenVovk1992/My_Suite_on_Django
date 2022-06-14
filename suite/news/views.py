@@ -5,18 +5,21 @@ from .forms import ArtilesForm
 # Create your views here.
 
 def news_home(request):
-    base = {
-        'title': 'News'
-    }
     news = Artiles.objects.order_by('-date')
-    return render(request, 'news/news_home.html', {'news': news, 'base': base})
+    base = {
+        'title': 'News',
+        'news': news
+    }
+
+    return render(request, 'news/news_home.html', base)
 
 def catalog_motors(request):
-    base = {
-        'title': 'Catalog'
-    }
     mtr = motors.objects.all()
-    return render(request, 'news/catalog_motors.html', {'motors': mtr, 'base': base})
+    base = {
+        'title': 'Catalog',
+        'motors': mtr
+    }
+    return render(request, 'news/catalog_motors.html', base)
 
 def add_new(request):
     error = ''
@@ -31,6 +34,7 @@ def add_new(request):
     data = ArtilesForm()
     base = {
         'title': 'add new',
-        'error': error
+        'error': error,
+        'form': data
     }
-    return render(request, 'news/add_new.html', {'base': base, 'form': data})
+    return render(request, 'news/add_new.html', base)
