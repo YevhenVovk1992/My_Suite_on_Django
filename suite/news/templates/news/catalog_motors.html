@@ -1,0 +1,17 @@
+{% extends 'mainapp/layout.html' %}
+
+{% block title %}{{ base.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>New motors</h1>
+            {% for el in motors %}
+                <div class="alert alert-warning" id="catalog">
+                    <h3>{{ el.title }}</h3>
+                    <p> {{ el.model }}</p>
+                </div>
+            {% endfor %}
+
+    </div>
+
+{% endblock %}

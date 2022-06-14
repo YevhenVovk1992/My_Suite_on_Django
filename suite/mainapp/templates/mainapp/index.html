@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="features">
-        <h1>Главная страица</h1>
+        <h1>Главная страница</h1>
         {% filter upper %}
         <p>Micro suite about me and my travels</p>
         {% endfilter %}
@@ -12,8 +12,8 @@
     </div>
     <div class="DateOfTravel">
         <h2>Where I rode?</h2>
-        <p>{% for el in countries%}
-         {{ el }}
+        <p>{% for el in countries %}
+            {{ el }}<br>
             {% endfor %}</p>
     </div>
 {% endblock %}

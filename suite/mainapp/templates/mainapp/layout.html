@@ -13,11 +13,16 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 <header>
     <div class="header">
         <button class="btn btn-warning"><a href="#" >Registration</a></button>
     </div>
 </header>
+<section class="banner">
+    {% block banner %}
+    {% endblock %}
+</section>
 <aside>
     <img src="{% static 'mainapp/img/logo_aside.jpg' %}" alt="">
     <span class="logo">MOTO VOVK</span>
@@ -25,7 +30,10 @@
     <ul>
         <a href="{% url 'home' %}" ><li>Home</li></a>
         <a href="{% url 'about' %}" ><li>About</li></a>
-        <a href="" ><li>Forum</li></a>
+        <a href="{% url 'news_home' %}" ><li>News</li></a>
+        <a href="{% url 'catalog_motors' %}" ><li>Catalog</li></a>
+        {% block add_new %}
+        {% endblock %}
     </ul>
 
 </aside>
@@ -34,6 +42,7 @@
     {% endblock %}
 </main>
 <footer>
+
     <div class="footer">
         <p>2022. All </p>
     </div>
