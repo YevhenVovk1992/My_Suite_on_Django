@@ -1,0 +1,17 @@
+{% extends 'mainapp/layout.html' %}
+
+{% block title %}{{ motors.title }}{% endblock %}
+
+{% block content %}
+    <div class="features" >
+        <h1>{{ motors.title }}</h1>
+        <p>{{ motors.model }}</p>
+        <img src="{{ motors.photo.url }}" alt="" class="img_photo">
+        <p id="detail_view">{{ motors.content }}</p>
+
+
+    </div>
+{% endblock %}
+{% block add_new %}
+    <a href="{% url 'add_new' %}" ><li><button class="btn btn-info"><i class="fas fa-plus-circle"><i/>Add new</button> </li></a>
+{% endblock %}

@@ -20,5 +20,7 @@ from . import views
 urlpatterns = [
     path('', views.news_home, name="news_home"),
     path('catalog/', views.catalog_motors, name="catalog_motors"),
-    path('add_new/', views.add_new, name="add_new")
+    path('add_new/', views.add_new, name="add_new"),
+    path('<int:pk>', views.NewsDetailView.as_view(), name='news-detail'),
+    path('Motor<int:pk>', views.InfCatalogMotors.as_view(), name='inf-catalog')
 ]

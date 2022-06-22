@@ -17,7 +17,7 @@ class Artiles(models.Model):
 class motors(models.Model):
     title = models.CharField('Brand', max_length=200)
     model = models.CharField('Model', max_length=250)
-    photo = models.ImageField(upload_to='photos/%model/')
+    photo = models.ImageField(upload_to='catalog/')
     content = models.TextField('About')
 
     def __str__(self):

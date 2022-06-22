@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Artiles, motors
 from .forms import ArtilesForm
+from django.views.generic import DetailView
 
 # Create your views here.
 
@@ -13,6 +14,11 @@ def news_home(request):
 
     return render(request, 'news/news_home.html', base)
 
+class NewsDetailView(DetailView):
+    model = Artiles
+    template_name = 'news/detail_view.html'
+    context_object_name = 'artiles'
+
 def catalog_motors(request):
     mtr = motors.objects.all()
     base = {
@@ -20,6 +26,11 @@ def catalog_motors(request):
         'motors': mtr
     }
     return render(request, 'news/catalog_motors.html', base)
+
+class InfCatalogMotors(DetailView):
+    model = motors
+    template_name = 'news/inf_catalog.html'
+    context_object_name = 'motors'
 
 def add_new(request):
     error = ''

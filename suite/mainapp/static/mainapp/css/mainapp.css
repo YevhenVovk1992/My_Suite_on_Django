@@ -11,6 +11,9 @@ main .features{
 main .features h1:{
     font-size: 50px;
 }
+.img_photo{
+    width: 350px;
+}
 main .features p{
     max-width: 400px;
     margin: 20px auto;
@@ -91,6 +94,9 @@ header{
     width: 700px;
     padding-left: 282px;
     margin: 20px 17%;
+}
+#detail_view {
+    max-width: 850px;
 }
 form {
     margin-left: 25%;
