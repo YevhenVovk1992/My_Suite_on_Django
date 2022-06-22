@@ -22,5 +22,7 @@ urlpatterns = [
     path('catalog/', views.catalog_motors, name="catalog_motors"),
     path('add_new/', views.add_new, name="add_new"),
     path('<int:pk>', views.NewsDetailView.as_view(), name='news-detail'),
+    path('<int:pk>/update', views.NewsUpdateView.as_view(), name='news-update'),
+    path('<int:pk>/delete', views.NewsDeleteView.as_view(), name='news-delete'),
     path('Motor<int:pk>', views.InfCatalogMotors.as_view(), name='inf-catalog')
 ]

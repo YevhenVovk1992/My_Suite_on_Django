@@ -7,10 +7,10 @@
         <h1>{{ artiles.title }}</h1>
         <p>{{ artiles.date }}</p>
         <p id="detail_view">{{ artiles.full_text }}</p>
-
-
+        <a href="{% url 'news-update' artiles.id %}" class="btn btn-info">Update</a>
+        <a href="{% url 'news-delete' artiles.id %}" class="btn btn-danger">Delete</a>
     </div>
 {% endblock %}
 {% block add_new %}
-    <a href="{% url 'add_new' %}" ><li><button class="btn btn-info"><i class="fas fa-plus-circle"><i/>Add new</button> </li></a>
+    <button class="btn btn-warning"><a href="{% url 'add_new' %}" >Add new</a></button>
 {% endblock %}

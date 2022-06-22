@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Artiles, motors
 from .forms import ArtilesForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 # Create your views here.
 
@@ -18,6 +18,16 @@ class NewsDetailView(DetailView):
     model = Artiles
     template_name = 'news/detail_view.html'
     context_object_name = 'artiles'
+
+class NewsUpdateView(UpdateView):
+    model = Artiles
+    template_name = 'news/add_new.html'
+    form_class = ArtilesForm
+
+class NewsDeleteView(DeleteView):
+    model = Artiles
+    success_url = '/news/'
+    template_name = 'news/new_delete.html'
 
 def catalog_motors(request):
     mtr = motors.objects.all()

@@ -15,6 +15,8 @@
 <body>
 <header>
     <div class="header">
+        {% block add_new %}
+        {% endblock %}
         <button class="btn btn-warning"><a href="#" >Registration</a></button>
     </div>
 </header>
@@ -27,8 +29,7 @@
         <a href="{% url 'about' %}" ><li>About</li></a>
         <a href="{% url 'news_home' %}" ><li>News</li></a>
         <a href="{% url 'catalog_motors' %}" ><li>Catalog</li></a>
-        {% block add_new %}
-        {% endblock %}
+
     </ul>
 
 </aside>
