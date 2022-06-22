@@ -13,13 +13,7 @@
 
 </head>
 <body>
-<header>
-    <div class="header">
-        {% block add_new %}
-        {% endblock %}
-        <button class="btn btn-warning"><a href="#" >Registration</a></button>
-    </div>
-</header>
+
 <aside>
     <img src="{% static 'mainapp/img/logo_aside.jpg' %}" alt="">
     <span class="logo">MOTO VOVK</span>
@@ -34,17 +28,25 @@
 
 </aside>
 <main>
+    <header>
+    <div class="header">
+        {% block add_new %}
+        {% endblock %}
+        <button class="btn btn-warning"><a href="#" >Registration</a></button>
+    </div>
+    </header>
     <section class="banner">
     {% block banner %}
     {% endblock %}
     </section>
     {% block content %}
     {% endblock %}
-</main>
-<footer>
+    <footer>
     <div class="footer">
-        <p>2022. All </p>
+        <p>2022. All rights reserved. </p>
     </div>
 </footer>
+</main>
+
 </body>
 </html>
