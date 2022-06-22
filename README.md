@@ -1,1 +1,1 @@
-# My_Suit_on_Django
+# My_Suite_on_Django
