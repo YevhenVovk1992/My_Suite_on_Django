@@ -12,8 +12,9 @@
                     <h3>{{ el.title }}</h3>
                     {% endfilter %}
                     <p> {{ el.anons }}</p>
-                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Read all</a>
                     <p>{{ el.full_text }}</p>
+                    <hr>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Read all</a>
                 </div>
             {% endfor %}
         {% else %}
