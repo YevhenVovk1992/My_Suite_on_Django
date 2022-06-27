@@ -13,6 +13,7 @@ class Artiles(models.Model):
     class Meta:
         verbose_name = 'New'
         verbose_name_plural = 'All News'
+        ordering = ['-date']
 
 class motors(models.Model):
     title = models.CharField(max_length=200, verbose_name='Brand')

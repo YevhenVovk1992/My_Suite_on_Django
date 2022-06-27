@@ -16,7 +16,7 @@ class ArtilesForm(ModelForm):
             }),
             "date": DateTimeInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Date'
+                'placeholder': '0000-00-00 00:00:00'
             }),
             "full_text": Textarea(attrs={
                 'class': 'form-control',

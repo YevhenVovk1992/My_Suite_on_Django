@@ -48,7 +48,7 @@ def add_new(request):
         data = ArtilesForm(request.POST)
         if data.is_valid():
             data.save()
-            return redirect("home")
+            return redirect("news_home")
         else:
             error = 'Incorrect'
 
