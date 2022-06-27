@@ -10,15 +10,12 @@ class Artiles(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return f'/news/{self.id}'
-
     class Meta:
         verbose_name = 'New'
-        verbose_name_plural = 'News'
+        verbose_name_plural = 'All News'
 
 class motors(models.Model):
-    title = models.CharField('Brand', max_length=200)
+    title = models.CharField(max_length=200, verbose_name='Brand')
     model = models.CharField('Model', max_length=250)
     photo = models.ImageField(upload_to='catalog/')
     content = models.TextField('About')
@@ -28,4 +25,5 @@ class motors(models.Model):
 
     class Meta:
         verbose_name = 'Motor'
-        verbose_name_plural = 'Motors'
+        verbose_name_plural = 'Catalog of Motors'
+        ordering = ['title', 'model']

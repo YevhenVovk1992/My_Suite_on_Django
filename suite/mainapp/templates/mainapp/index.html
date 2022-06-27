@@ -1,4 +1,5 @@
 {% extends 'mainapp/layout.html' %}
+{% load static %}
 
 {% block title %}{{ title }}{% endblock %}
 
@@ -8,12 +9,15 @@
         {% filter upper %}
         <p>Micro suite about me and my travels</p>
         {% endfilter %}
-        <a href="{% url 'about' %}"><button class="btn btn-warning">To the page "ABOUT"</button></a>
+        <img src="{% static 'mainapp/img/logo_main.png' %}">
+
     </div>
     <div class="DateOfTravel">
         <h2>Where I rode?</h2>
         <p>{% for el in countries %}
             {{ el }}<br>
             {% endfor %}</p>
+        <a href="{% url 'about' %}"><button class="btn btn-warning">To the page "ABOUT"</button></a>
     </div>
+
 {% endblock %}

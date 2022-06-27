@@ -6,7 +6,9 @@
     <div class="features" >
         <h1>{{ motors.title }}</h1>
         <p>{{ motors.model }}</p>
-        <img src="{{ motors.photo.url }}" alt="" class="img_photo">
+        {% if motors.photo %}
+            <img src="{{ motors.photo.url }}" alt="" class="img_photo">
+        {% endif %}
         <p id="detail_view">{{ motors.content }}</p>
 
 
