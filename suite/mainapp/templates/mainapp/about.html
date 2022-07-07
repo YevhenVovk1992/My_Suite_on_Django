@@ -8,4 +8,10 @@
         <p>My name is Jeka. I ride on Suzuki DL650 V-Strom</p>
         <a href="{% url 'home' %}"><button class="btn btn-warning">To the home page</button></a>
     </div>
+    <div class="DateOfTravel">
+        <h2>Where I rode?</h2>
+        <p>{% for el in countries %}
+            {{ el }}<br>
+            {% endfor %}</p>
+    </div>
 {% endblock %}

@@ -9,15 +9,15 @@ from .forms import SignUpForm
 # Create your views here.
 def index(request):
     data = {
-        'title': ' MOTO VOVK ',
-        'countries': ('Ukraine', 'Hungary', 'Slovenia', 'Austria', 'Bulgaria', 'Romania')
+        'title': ' MOTO VOVK '
     }
     return render(request, 'mainapp/index.html', data)
 
 
 def about(request):
     data = {
-        'title': "About"
+        'title': "About",
+        'countries': ('Ukraine', 'Hungary', 'Slovenia', 'Austria', 'Bulgaria', 'Romania')
     }
     return render(request, 'mainapp/about.html', data)
 
