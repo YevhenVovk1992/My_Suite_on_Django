@@ -21,17 +21,11 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
-        widgets = {
-            "username": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Name of post'
-            }),
-            "password1": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'password'
-            }),
-            "password2": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'password'
-            })
-        }
+
+
+    def __init__(self, *args, **kwargs):
+        super(SignUpForm, self).__init__(*args, **kwargs)
+
+        self.fields['username'].widget.attrs['class'] = 'form-control'
+        self.fields['password1'].widget.attrs['class'] = 'form-control'
+        self.fields['password2'].widget.attrs['class'] = 'form-control'
