@@ -5,14 +5,13 @@
 {% block content %}
     <div class="features">
         <h1>News</h1>
-        {% if news %}{# Проверка наличии новостей #}
+        {% if news %}
             {% for el in news %}
                 <div class="alert alert-warning">
                     {% filter upper %}
                     <h3>{{ el.title }}</h3>
                     {% endfilter %}
                     <p> {{ el.anons }}</p>
-                    <p>{{ el.full_text }}</p>
                     <hr>
                     <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Read all</a>
                 </div>
